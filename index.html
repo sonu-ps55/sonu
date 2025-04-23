@@ -1,0 +1,79 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthEase - Home</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  
+      
+  <header>
+    <h1>HealthEase - Healthcare Management System</h1>
+    <nav class="navbar">
+        <div class="logo">HealthEase</div>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        
+          
+        </ul>
+      </nav>
+      <!-- Dark Mode Toggle -->
+<label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+  
+      
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Welcome to HealthEase</h2>
+      <p>Your one-stop portal for managing healthcare records and appointments.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthEase. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+  
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+  
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+  
+    toggle.addEventListener("change", () => {
+      body.classList.toggle("dark-mode");
+  
+      // saare dark-enabled components ko bhi update karna
+      document.querySelector("header").classList.toggle("dark-mode");
+      document.querySelector("footer").classList.toggle("dark-mode");
+      document.querySelector(".navbar").classList.toggle("dark-mode");
+  
+      document.querySelectorAll(".card, .form-box, .doctor-card").forEach(el => {
+        el.classList.toggle("dark-mode");
+      });
+    });
+  </script>
+  
+</body>
+</html>

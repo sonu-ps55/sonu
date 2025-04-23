@@ -1,0 +1,36 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register Patient</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Patient Registration</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Register a New Patient</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Full Name" id="name" required /><br><br>
+      <input type="number" placeholder="Age" id="age" required /><br><br>
+      <input type="text" placeholder="Gender" id="gender" required /><br><br>
+      <input type="email" placeholder="Email" id="email" required /><br><br>
+      <input type="text" placeholder="Contact Number" id="contact" required /><br><br>
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="registeredPatients"></div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
